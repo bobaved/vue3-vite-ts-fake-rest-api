@@ -24,8 +24,6 @@ export const store = createStore<State>({
   }
 })
 
-store.registerModule('postWhateverModule', postModule)
-
 export function useStore () {
   return baseUseStore(key)
 }
