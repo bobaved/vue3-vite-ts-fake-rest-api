@@ -5,7 +5,7 @@ import { Todo } from "../models/todo.model";
 export default defineComponent({
   props: {
     todo: {
-      type: Todo,
+      type: [Todo, Object],
       required: true
     }
   },

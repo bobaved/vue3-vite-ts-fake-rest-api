@@ -1,16 +1,15 @@
-<script lang="ts">import { defineComponent, toRefs } from "vue";
+<script lang="ts">import { defineComponent, Ref, toRefs } from "vue";
 import { Post } from "../models/post.model";
 
 export default defineComponent({
   props: {
     post: {
-      type: Post,
+      type: [Post, Object],
       required: true
     }
   },
-  setup(props) {
+  setup(props): {post: Ref<Post | Record<string, any>>} {
     const {post} = toRefs(props)
-
     return {post}
   }
 

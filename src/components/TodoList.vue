@@ -1,10 +1,11 @@
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, Ref } from 'vue'
 import useTodos from '../composables/useTodos';
+import { Todo } from '../models/todo.model';
 import TodoTeaser from './TodoTeaser.vue';
 
 export default defineComponent({
-    setup(props) {
+    setup(props): {todos: Ref<Todo[]>, fetchTodos: () => Promise<void>} {
         const { todos, fetchTodos } = useTodos();
         return { todos, fetchTodos };
     },
