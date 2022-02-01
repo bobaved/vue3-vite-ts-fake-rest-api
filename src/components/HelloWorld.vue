@@ -1,6 +1,5 @@
 <script lang="ts">
-import { ref, defineComponent, toRefs } from 'vue'
-import usePosts from '../composables/usePosts'
+import { defineComponent, toRefs } from 'vue'
 import { PostActionTypes } from '../store/modules/postModule';
 import { useStore } from '../store/store'
 
@@ -13,11 +12,8 @@ export default defineComponent({
     const store = useStore();
     store.dispatch('postModule/' + PostActionTypes.FETCH_POSTS)
     const {msg} = toRefs(props)
-    const count = ref(0)
 
-    const {posts, fetchPosts} = usePosts();
-
-    return {msg, count, posts, fetchPosts}
+    return {msg}
   }
 
 })
@@ -28,26 +24,16 @@ export default defineComponent({
   <h1>{{ msg }}</h1>
 
   <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
+    Hallo liebes FitX Team!
   </p>
 
-  <p>See <code>README.md</code> for more information.</p>
+  <p>Das ist eine kleine Vue App, die ich jetzt in sehr kurzer Zeit als kleinen Vorführzweck hingezimmert habe.</p>
 
+  <p>Ich benutze hier die API von <a href="https://jsonplaceholder.typicode.com/" target="_blank">JSON Placeholder</a>.</p>
+  <p>Das ist eine kleine Test-API.</p>
   <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
-
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
+    Dieser Text befindet sich hier noch in der 
+    <code>components/HelloWorld.vue</code>, die aber auch das "Fetching" der Post Daten triggert für die Liste an Posts (siehe unten).
   </p>
 </template>
 

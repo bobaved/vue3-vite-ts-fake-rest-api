@@ -9,7 +9,7 @@ import ListGrid from './components/ListGrid.vue'
   <v-app>
     <v-main>
       <img alt="Vue logo" src="./assets/logo.png" />
-      <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+      <HelloWorld msg="Hello Vue 3 + TypeScript + Vite + Vuetify (alpha)" />
       <ListGrid />
     </v-main>
   </v-app>

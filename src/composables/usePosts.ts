@@ -13,7 +13,6 @@ export default function usePosts(): {
         return response.json()
       }
     )
-    console.log("HOW OFTEN DO I GET CALLED")
 
     posts.value = response
   }

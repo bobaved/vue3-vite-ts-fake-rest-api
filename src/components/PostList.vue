@@ -7,7 +7,8 @@ export default defineComponent({
   computed: mapState("postModule", {
       // at least my IDE would not let me put the type for the state of module postModule
       // this also leads to warnings in development mode, cause the type of post is Object when passing it to the child component
-      posts: (state: any) => state.posts,
+      // even typecasting it with as Post[] is not helping
+      posts: (state: any) => {return state.posts},
   }),
   components: { PostTeaser }
 })

@@ -1,7 +1,8 @@
 <script lang="ts">import { defineComponent } from "vue";
 import PostList from "./PostList.vue";
+import TodoList from "./TodoList.vue";
 
-export default defineComponent({ components: { PostList } })
+export default defineComponent({ components: { PostList, TodoList } })
 </script>
 
 <template>
@@ -17,13 +18,7 @@ export default defineComponent({ components: { PostList } })
         cols="12"
         sm="6"
       >
-        <v-card
-          class="pa-2"
-          outlined
-          tile
-        >
-          One of two columns
-        </v-card>
+        <TodoList />
       </v-col>
     </v-row>
   </v-container>
