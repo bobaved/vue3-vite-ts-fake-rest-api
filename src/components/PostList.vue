@@ -20,7 +20,7 @@ export default defineComponent({
     <v-divider></v-divider>
     <v-card-text>    
       <div>
-        This List of Posts if provided by Vuex functionality
+        This List of Posts is provided by Vuex functionality
       </div>
       <v-divider></v-divider>
       <v-list>

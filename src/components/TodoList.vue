@@ -20,7 +20,7 @@ export default defineComponent({
     <v-divider></v-divider>
     <v-card-text>    
       <div>
-        This List of Todos if provided by a Composable
+        This List of Todos is provided by a Composable
       </div>
       <v-divider></v-divider>
       <v-list>
